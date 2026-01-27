@@ -1,0 +1,26 @@
+step 1 :- check python version 
+python --version
+
+step 2:- create virtual env  
+python -m venv myenv    
+
+step 3:- active the env
+.\myenv\Scripts\activate   -> show :- (myenv) PS C:\Users\student\Desktop\Pruthvi> 
+
+deactivate :- (myenv) PS C:\Users\student\Desktop\Pruthvi> deactivate
+
+installing packages inside virtual env ((myenv) PS C:\Users\student\Desktop\Pruthvi> ) 
+install a package :- pip install requests
+check install packages(display):- 
+
+pip list
+
+Package            Version
+------------------ --------
+certifi            2026.1.4
+charset-normalizer 3.4.4
+idna               3.11
+pip                25.3
+requests           2.32.5
+urllib3            2.6.3
+
