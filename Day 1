@@ -57,6 +57,7 @@ Save (CSV / JSON)
 
 beutifulesoup cmd:- pip install requests beutifulesoup
 
-
-
 https://web.archive.org/web/20200518073855/https://www.empireonline.com/movies/features/best-movies-2/
+
+pip install :- pip install psycopg2-binary
+
