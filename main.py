@@ -1,22 +1,10 @@
-from bs4 import BeautifulSoup
+import psycopg2
+connection = psycopg2.connect(database="postgres",user="postgres",password="......",host="localhost",port="5432")
+cursor = connection.cursor()
+print("DB opened successfully")
 
-html_content = """<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Available Books</h1>
-    <p class="Books">Book 1</p>
-    <p class="Books">Book 2</p>
-    <p class="Books">Book 3</p>
-</body>
-</html>"""
+insert_query="""insert into emp1 (name, dep,salary) values(%s,%s,%s)"""
 
-soup = BeautifulSoup(html_content, "html.parser")
-books = soup.find_all("p", class_="Books")
-
-for book in books:
-    print(book.text)
+cursor.execute(insert_query,("Pruthvi","Engg",75000))
+connection.commit()
+print("innsert successfully")
