@@ -1,0 +1,3 @@
+project
+
+pip install tranformers torch  
